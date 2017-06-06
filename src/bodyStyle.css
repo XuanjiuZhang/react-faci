@@ -1,0 +1,90 @@
+body {
+  background: #f8f4f3;
+  color: #000000;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.fullbg{
+  display: block;
+}
+
+.headertop {
+  background: #fff;
+  min-height: 88px;
+  padding-top: 23px;
+  color: #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.infoheader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletters {
+  position: relative;
+}
+
+.continfobox {
+  position: relative;
+}
+
+.infobox {
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  padding: 20px;
+  position: relative;
+  min-height: 330px;
+  boxsizing: border-box;
+  color: #707070;
+  height: 100%;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0);
+}
+
+.infobox figure {
+  padding: 0;
+  display: inline-block;
+  float: none;
+  width: 200px;
+}
+
+.infobox div.tags {
+  background-color: #ffeee5;
+  border-radius: 6px;
+  font-size: 10px;
+  max-width: 58px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  bottom: 0;
+  width: auto;
+  color: #ff5c03;
+  padding: 5px 8px;
+  min-height: 19px;
+}
+
+.info {
+  position: static;
+  padding: 0;
+}
+
+.operate-area {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+}
+
+.operate-entry {
+  color: rebeccapurple;
+  font-size: 16px !important;
+}
