@@ -249,10 +249,18 @@ body {
   border-radius: 3px;
 }
 
+.qrcode {
+  display: none;
+}
+
+.figure-img {
+  width: 100%;
+}
+
 .img-circle:hover .cover {
   display: none;
 }
 
 .img-circle:hover .qrcode {
-  display: block;
+  display: inline-block;
 }
