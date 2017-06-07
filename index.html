@@ -2,56 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
-    <title>Title</title>
-    <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
-    <link rel="stylesheet" href="./src/normalize.css">
-    <link rel="stylesheet" href="./src/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/bodyStyle.css">
-    <link rel="stylesheet" href="./src/font-awesome.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+  <title>Title</title>
+  <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+  <link rel="stylesheet" href="./src/normalize.css">
+  <link rel="stylesheet" href="./src/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/bodyStyle.css">
+  <link rel="stylesheet" href="./src/font-awesome.css">
 </head>
 
 <body>
-    <header class="fullbg headertop"></header>
+  <header class="fullbg headertop">
     <div class="container">
-        <header class="col-xs-12 text-center infoheader"></header>
-        <section class="col-xs-12 newsletters">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 continfobox">
-                    <div class="infobox text-center">
-                        <div class="front">
-                            <figure class="col-lg-5 col-md-5 col-sm-12 col-xs-12 img-circle"><img src="https://dc8gwjuur0w0x.cloudfront.net/lists/avatars/000/000/010/small_x2_Apple.jpg?1486166548" alt="Small x2 screen shot 2016 08 15 at 8.50.07 am">
-                            </figure>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info">
-                                <h3>Streaming</h3>
-                                <div class="tags"><b>WEEKLY</b></div>
-                                <!--<span class="fa fa-check" style="font-size: 20px"></span>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logotop">
+        <a class="inside-logo" href="/"></a>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right logotxttop">
+        <button type="button" class="btn btn-default header-btn-left yellow-btn">创建场景</button>
+        <button type="button" class="btn btn-success header-btn-left">模板商城</button>
+        <div class="header-btn-right">
+          <span class="header-username">username</span>
+          <img class="user-avatar" src="./src/img/default-user.jpg" alt="">
+        </div>
+        <!--<p class="lh24">THE NETWORK OF EMAIL NEWSLETTERS</p>-->
+      </div>
+      <div class="col-xs-12 tags-wrapper">
+        <a class="active" id="all-tags-link" href="/">企业后台</a>
+        <div class="tags-list">
+          <div class="tags-fade-left"></div>
+          <ul id="tags-links">
+            <li><a class="tag-anchor" id="tag-link-technology" href="/tags/technology">场景管理</a></li>
+            <li><a class="tag-anchor" id="tag-link-proposed" href="/tags/proposed">素材管理</a></li>
+            <li><a class="tag-anchor" id="tag-link-politics" href="/tags/politics">数据收集</a></li>
+            <li><a class="tag-anchor" id="tag-link-business" href="/tags/business">角色管理</a></li>
+            <li><a class="tag-anchor" id="tag-link-cities" href="/tags/cities">员工管理</a></li>
+            <!--<li><a class="tag-anchor" id="tag-link-entertainment" href="/tags/entertainment">Entertainment</a></li>
+            <li><a class="tag-anchor" id="tag-link-sports" href="/tags/sports">Sports</a></li>
+            <li><a class="tag-anchor" id="tag-link-lifestyle" href="/tags/lifestyle">Lifestyle</a></li>-->
+          </ul>
+          <div class="tags-fade-right"></div>
+        </div>
+        <div id="tags-arrows">
+          <a id="arrow-left" class="tags-arrows disabled" href="#"><i class="fa fa-chevron-left"></i></a>
+          <a id="arrow-right" class="tags-arrows" href="#"><i class="fa fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <header class="col-xs-12 text-center infoheader">
+
+    </header>
+    <section class="col-xs-12 newsletters">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 continfobox">
+          <div class="infobox text-center">
+            <div class="front">
+              <figure class="col-lg-5 col-md-5 col-sm-12 col-xs-12 img-circle"><img src="https://dc8gwjuur0w0x.cloudfront.net/lists/avatars/000/000/010/small_x2_Apple.jpg?1486166548" alt="Small x2 screen shot 2016 08 15 at 8.50.07 am">
+              </figure>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info">
+                <h3>Streaming</h3>
+                <div class="tags"><b>会议</b></div>
+                <!--<span class="fa fa-check" style="font-size: 20px"></span>
                                 <span class="fa fa-check" style="font-size: 20px"></span>
                                 <span class="fa fa-check" style="font-size: 20px"></span>-->
-                                <span class="fa fa-tags operate-entry"></span>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 operate-area">
-                                <div class="operate-area-content">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sm-offset-1">1</div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2</div>
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">3</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sm-offset-1">4</div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">5</div>
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">6</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <span class="fa fa-tags operate-entry"></span>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 operate-area">
+                <div class="operate-area-content container-fluid">
+                  <div class="row margin-top-10">
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-edit"></span></div>
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-paper-plane-o"></span></div>
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-cog"></span></div>
+                  </div>
+                  <div class="row margin-top-10">
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-share"></span></div>
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-folder-open-o"></span></div>
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-copy"></span></div>
+                  </div>
+                  <div class="row margin-top-10">
+                    <div class="operation-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="fa fa-trash-o"></span></div>
+                    <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3</div>-->
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-    </div>
-    <script type="text/javascript" src="build/app.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="build/app.js"></script>
 </body>
 
 </html>

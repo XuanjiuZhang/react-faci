@@ -6,7 +6,7 @@ body {
   font-weight: 400;
 }
 
-.fullbg{
+.fullbg {
   display: block;
 }
 
@@ -56,6 +56,7 @@ body {
   display: inline-block;
   float: none;
   width: 200px;
+  min-height: 200px;
 }
 
 .infobox div.tags {
@@ -71,6 +72,7 @@ body {
   color: #ff5c03;
   padding: 5px 8px;
   min-height: 19px;
+  cursor: pointer;
 }
 
 .info {
@@ -79,17 +81,170 @@ body {
 }
 
 .operate-area {
+  /*display: none;*/
   width: 100%;
-  height: 200px;
+  height: 100%;
   background: #fff;
-  padding: 10% 10%;
+  padding: 10px;
+  border-radius: 6px;
+  /*padding: 10% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.operate-area:hover {
+  display: block;
 }
 
 .operate-entry {
   color: rebeccapurple;
-  font-size: 16px !important;
+  font-size: 20px !important;
 }
 
-.operate-area-content {
-  margin: auto;
+.operate-area-content span {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.operation-wrapper {
+  border-radius: 4px;
+}
+
+.operation-wrapper:hover {
+  background: #f9d300;
+  opacity: .7;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.tags-wrapper {
+  display: flex;
+}
+
+.tags-list {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  height: 40px;
+  display: flex;
+}
+
+#all-tags-link {
+  display: block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #ff5c03;
+  /*color: #707070;*/
+}
+
+#tags-links {
+  display: flex;
+  position: relative;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.tags-fade-left {
+  background: linear-gradient(90deg, #fff, #fff, rgba(255, 255, 255, 0));
+  width: 10px;
+  left: 0;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+}
+
+.tags-fade-right {
+  background: linear-gradient(-90deg, #fff, #fff, rgba(255, 255, 255, 0));
+  width: 30px;
+  height: 40px;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.tag-anchor {
+  padding: 0 20px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #707070;
+}
+
+#tags-arrows {
+  display: flex;
+  line-height: 40px;
+}
+
+.tags-arrows {
+  color: #707070;
+  padding: 0 5px;
+}
+
+.tags-arrows.disabled {
+  color: #ebe8e7;
+}
+
+.lh24 {
+  margin-top: 10px;
+}
+
+.inside-logo {
+  display: block;
+  height: 40px;
+  min-width: 210px;
+  font-size: 34px;
+  font-family: 'Colaba', 'Open Sans', sans-serif;
+  /*color: #ff5c03;*/
+  background: url(./img/xmf-logo.png) no-repeat 0;
+}
+
+.header-btn-left {
+  height: 40px;
+  float: left;
+  margin-left: 10px;
+}
+
+.header-btn-right {
+  height: 40px;
+  float: right;
+}
+
+.yellow-btn {
+  background: #ffe35e;
+  border-color: #ffe35e;
+}
+
+.yellow-btn:active {
+  background: #f9d300;
+  border-color: #f9d300;
+}
+
+.yellow-btn:hover {
+  background: #f9d300;
+  border-color: #f9d300;
+}
+
+.yellow-btn:focus {
+  background: #f9d300;
+  border-color: #f9d300;
+}
+
+.header-username {
+  line-height: 40px;
+}
+
+.user-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
 }
