@@ -1,8 +1,9 @@
 /**
- * Created by jiaojiaodebook on 17/1/18.
+ * Created by on 17/1/18.
  */
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
@@ -15,34 +16,42 @@ module.exports = {
     publicPath: '/build/',
     chunkFilename: '[name].min.js?[hash:8]'
   },
-  rules: [
-    {
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
-    },
-    {
-      test: /\.css/,
-      use: ['style-loader', 'css-loader', 'postcss-loader']
-    },
-    {
-      test: /\.less/,
-      use: ['style-loader', 'css-loader', 'autoprefixer-loader', 'less-loader']
-    },
-    {
-      test: /\.(png|jpg|gif|svg|eot|svg|ttf|woff|woff2)$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.less/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'autoprefixer-loader', 'less-loader']
+        })
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
       }
-    }
-  ],
+    ],
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({ url: 'http://localhost:8087' })
+    new OpenBrowserPlugin({ url: 'http://localhost:8087' }),
+    new webpack.LoaderOptionsPlugin({
+       debug: true
+     }),
+    new ExtractTextPlugin("extractStyle.css"),
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css', '.less']
-  },
-  debug: true
+    extensions: ['.js', '.jsx', '.css', '.less']
+  }
 };
