@@ -32,7 +32,7 @@ class Header extends Component {
             <img className="user-avatar" src="./src/img/default-user.jpg" alt=""/>
           </div>
         </div>
-        <NavBar></NavBar>
+        <NavBar {...this.props}></NavBar>
       </div>
     </header>);
 	}

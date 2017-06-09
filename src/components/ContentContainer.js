@@ -6,6 +6,7 @@ import ItemWrapper from './ItemWrapper';
 class ContentContainer extends Component {
   constructor(props){
     super(props);
+    console.log(props);
     this.state = {
     };
   }

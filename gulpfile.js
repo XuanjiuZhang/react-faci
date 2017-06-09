@@ -28,6 +28,7 @@ gulp.task('dev', function() {
   var server = new webpackDevServer(compiler, {
     contentBase: path.resolve( __dirname ,'./'),
     hot: true,
+    historyApiFallback: true,
     publicPath: "/build/",
     headers: { "X-Custom-Header": "yes" },
     stats: { colors: true },

@@ -26,10 +26,7 @@ class AppFaci extends Component {
       'animated-page': this.state.inTurnPage,
       'animated-page-fast': this.state.fastTurnPage
     });*/
-		return (<div className="full">
-      <Header></Header>
-      <AppFaciRouter></AppFaciRouter>
-    </div>);
+		return (<AppFaciRouter></AppFaciRouter>);
 	}
 }
 

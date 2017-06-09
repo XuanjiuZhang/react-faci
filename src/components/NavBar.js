@@ -1,6 +1,9 @@
 import React, {
 	Component
 } from 'react';
+import {
+  Link
+} from 'react-router-dom';
 
 class NavBar extends Component {
   constructor(props){
@@ -19,15 +22,16 @@ class NavBar extends Component {
 
 	render() {
 		return (<div className="col-xs-12 tags-wrapper">
-        <a className="active" id="all-tags-link" href="/">企业后台</a>
+        <Link className="active" id="all-tags-link" to={'/'}>企业后台</Link>
         <div className="tags-list">
           <div className="tags-fade-left"></div>
           <ul id="tags-links">
-            <li><a className="tag-anchor" id="tag-link-technology" href="/tags/technology">场景管理</a></li>
-            <li><a className="tag-anchor" id="tag-link-proposed" href="/tags/proposed">素材管理</a></li>
-            <li><a className="tag-anchor" id="tag-link-politics" href="/tags/politics">数据收集</a></li>
-            <li><a className="tag-anchor" id="tag-link-business" href="/tags/business">角色管理</a></li>
-            <li><a className="tag-anchor" id="tag-link-cities" href="/tags/cities">员工管理</a></li>
+            {/*<li><Link to={'/manage'}>Rendering with React</Link></li>*/}
+            <li><Link to={'/manage'} className="tag-anchor">场景管理</Link></li>
+            <li><Link to={'/manage'} className="tag-anchor">素材管理</Link></li>
+            <li><Link to={'/manage'} className="tag-anchor">数据收集</Link></li>
+            <li><Link to={'/manage'} className="tag-anchor">角色管理</Link></li>
+            <li><Link to={'/manage'} className="tag-anchor">员工管理</Link></li>
           </ul>
           <div className="tags-fade-right"></div>
         </div>
